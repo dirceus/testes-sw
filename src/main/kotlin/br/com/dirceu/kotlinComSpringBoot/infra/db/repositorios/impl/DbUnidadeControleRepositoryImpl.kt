@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-class DbUnidadeControleJpaRepository(
+class DbUnidadeControleRepositoryImpl(
     private val unidadeControleJpaRepository: UnidadeControleJpaRepository)
     : UnidadeControleRepository
 {

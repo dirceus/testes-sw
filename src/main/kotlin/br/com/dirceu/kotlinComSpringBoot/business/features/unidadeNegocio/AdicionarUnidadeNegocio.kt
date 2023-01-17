@@ -2,8 +2,8 @@ package br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocioRepository
-import br.com.dirceu.kotlinComSpringBoot.commons.FunciolidadeExecutavel
-import br.com.dirceu.kotlinComSpringBoot.commons.exceptions.BusinessException
+import br.com.dirceu.kotlinComSpringBoot.business.commons.FunciolidadeExecutavel
+import br.com.dirceu.kotlinComSpringBoot.business.commons.exceptions.BusinessException
 import org.springframework.stereotype.Service
 
 @Service

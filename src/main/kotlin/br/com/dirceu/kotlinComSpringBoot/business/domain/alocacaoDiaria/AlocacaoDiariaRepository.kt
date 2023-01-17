@@ -1,7 +1,7 @@
 package br.com.dirceu.kotlinComSpringBoot.business.domain.alocacaoDiaria
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.alocacaoDiaria.AlocacaoDiariaFiltroDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria.AlocacaoDiariaFiltroDTO
 import java.util.*
 
 interface AlocacaoDiariaRepository {

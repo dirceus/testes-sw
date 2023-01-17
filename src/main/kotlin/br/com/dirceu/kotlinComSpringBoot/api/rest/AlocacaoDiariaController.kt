@@ -1,8 +1,8 @@
 package br.com.dirceu.kotlinComSpringBoot.api.rest
 
 import br.com.dirceu.kotlinComSpringBoot.business.features.alocacaoDiaria.AlocarProducaoSipNasUnidadesControle
-import br.com.dirceu.kotlinComSpringBoot.commons.ExecutorFuncionalidade
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.alocacaoDiaria.RequesicaoAlocacaoDiariaDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ExecutorFuncionalidade
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria.RequesicaoAlocacaoDiariaDTO
 import org.springframework.web.bind.annotation.*
 import java.util.concurrent.CompletionStage
 

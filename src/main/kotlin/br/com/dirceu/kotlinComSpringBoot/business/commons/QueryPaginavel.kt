@@ -1,4 +1,4 @@
-package br.com.dirceu.kotlinComSpringBoot.commons
+package br.com.dirceu.kotlinComSpringBoot.business.commons
 
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Pageable

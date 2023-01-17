@@ -1,6 +1,6 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.dto.alocacaoDiaria
+package br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria
 
-import br.com.dirceu.kotlinComSpringBoot.commons.QueryPaginavel
+import br.com.dirceu.kotlinComSpringBoot.business.commons.QueryPaginavel
 import java.util.*
 
 class AlocacaoDiariaFiltroDTO (

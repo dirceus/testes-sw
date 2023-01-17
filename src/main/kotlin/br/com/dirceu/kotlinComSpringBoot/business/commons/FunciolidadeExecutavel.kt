@@ -1,4 +1,4 @@
-package br.com.dirceu.kotlinComSpringBoot.commons
+package br.com.dirceu.kotlinComSpringBoot.business.commons
 
 import org.springframework.stereotype.Service
 import java.util.concurrent.CompletableFuture

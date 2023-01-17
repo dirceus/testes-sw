@@ -1,4 +1,4 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.dto.noSip
+package br.com.dirceu.kotlinComSpringBoot.business.commons.dto.noSip
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.noSip.NoProducaoSip
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeControle.UnidadeControle

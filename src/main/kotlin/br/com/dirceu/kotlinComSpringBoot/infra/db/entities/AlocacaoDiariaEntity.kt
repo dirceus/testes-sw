@@ -62,22 +62,14 @@ class AlocacaoDiariaEntity{
         this.unidadeNegocio = unidadeNegocioEntity
         this.data = alocacaoDiaria.dataAlocacao
         this.status = alocacaoDiaria.status.codigo
-
-        var alocacoesPorUcEntity = alocacaoDiaria.alocacoesPorUC.map {
-            convertAlocacaoPorUCemEntity(it,alocacaoDiaria)
-        }
         this.totalVolume = alocacaoDiaria.alocacoesPorUC.sumOf { it.producao }
-        this.alocacoesPorUC = alocacoesPorUcEntity
         this.relatorioErros = alocacaoDiaria.relatorioErros.map {
             AlocacaoDiariaRelatorioErrosEntity(null,this, it)
         }
-
+        this.alocacoesPorUC = alocacaoDiaria.alocacoesPorUC.map {
+            AlocacaoDiariaPorUcEntity(null, this, UnidadeControleEntity().fromUnidadeControle(it.uc), it.producao)
+        }
     }
 
-    private fun convertAlocacaoPorUCemEntity(alocacaoPorUc: AlocacaoDiariaPorUC, alocacaoDiaria:AlocacaoDiaria) : AlocacaoDiariaPorUcEntity{
-        var alocacaoPorUcEntity = AlocacaoDiariaPorUcEntity()
-        alocacaoPorUcEntity.fromAlocacaoDiariaPorUc(alocacaoPorUc, alocacaoDiaria)
-        return alocacaoPorUcEntity
-    }
 
 }

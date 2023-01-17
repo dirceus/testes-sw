@@ -5,11 +5,11 @@ import br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio.Adicio
 import br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio.ConsultarUnidadesNegocio
 import br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio.EditarUnidadeNegocio
 import br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio.ListarUnidadesNegocioAtivas
-import br.com.dirceu.kotlinComSpringBoot.commons.ExecutorFuncionalidade
-import br.com.dirceu.kotlinComSpringBoot.commons.ListaPaginada
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioCompletoDTO
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioDTO
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ExecutorFuncionalidade
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ListaPaginada
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioCompletoDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
 import org.springframework.web.bind.annotation.*
 import java.util.concurrent.CompletionStage
 

@@ -48,7 +48,7 @@ class UnidadeControleEntity {
 
     }
 
-    fun fromUnidadeControle(uc : UnidadeControle){
+    fun fromUnidadeControle(uc : UnidadeControle) : UnidadeControleEntity{
         this.id = uc.codigo
         this.nome = uc.nome
         this.descricao = uc.descricao
@@ -58,6 +58,7 @@ class UnidadeControleEntity {
         this.inicioVigencia = uc.inicioVigencia
         this.fimVigencia = uc.fimVigencia
         this.dataFimRetroativa = uc.dataFimRetroativa
+        return this
     }
 
 }

@@ -1,7 +1,7 @@
 package br.com.dirceu.kotlinComSpringBoot.business.domain.alocacaoDiaria
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.noSip.NoProducaoParaProcessamentoDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.noSip.NoProducaoParaProcessamentoDTO
 import java.util.*
 
 data class AlocacaoDiaria(

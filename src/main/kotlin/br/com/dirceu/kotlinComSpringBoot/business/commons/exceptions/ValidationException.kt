@@ -1,3 +1,3 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.exceptions
+package br.com.dirceu.kotlinComSpringBoot.business.commons.exceptions
 
 class ValidationException(message: String) : RuntimeException(message)

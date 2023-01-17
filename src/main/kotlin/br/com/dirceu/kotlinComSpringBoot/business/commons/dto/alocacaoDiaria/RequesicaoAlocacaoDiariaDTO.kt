@@ -1,4 +1,4 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.dto.alocacaoDiaria
+package br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria
 
 import java.util.*
 

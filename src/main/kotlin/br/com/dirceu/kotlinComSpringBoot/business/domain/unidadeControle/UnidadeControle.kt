@@ -1,7 +1,7 @@
 package br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeControle
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
-import br.com.dirceu.kotlinComSpringBoot.commons.exceptions.BusinessException
+import br.com.dirceu.kotlinComSpringBoot.business.commons.exceptions.BusinessException
 import java.util.*
 
 data class UnidadeControle(

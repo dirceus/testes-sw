@@ -1,7 +1,7 @@
 package br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio
 
-import br.com.dirceu.kotlinComSpringBoot.commons.ListaPaginada
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ListaPaginada
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
 import java.util.*
 
 interface UnidadeNegocioRepository {

@@ -1,6 +1,6 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio
+package br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio
 
-import br.com.dirceu.kotlinComSpringBoot.commons.QueryPaginavel
+import br.com.dirceu.kotlinComSpringBoot.business.commons.QueryPaginavel
 
 data class UnidadeNegocioFiltroDTO(
 

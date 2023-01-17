@@ -1,4 +1,4 @@
-package br.com.dirceu.kotlinComSpringBoot.commons
+package br.com.dirceu.kotlinComSpringBoot.business.commons
 
 data class ListaPaginada<T>(
     val total: Long,

@@ -5,10 +5,10 @@ import br.com.dirceu.kotlinComSpringBoot.business.domain.alocacaoDiaria.Alocacao
 import br.com.dirceu.kotlinComSpringBoot.business.domain.noSip.NoSipRepository
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeControle.UnidadeControleRepository
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocioRepository
-import br.com.dirceu.kotlinComSpringBoot.commons.FunciolidadeExecutavel
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.alocacaoDiaria.RequesicaoAlocacaoDiariaDTO
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.noSip.NoProducaoParaProcessamentoDTO
-import br.com.dirceu.kotlinComSpringBoot.commons.exceptions.BusinessException
+import br.com.dirceu.kotlinComSpringBoot.business.commons.FunciolidadeExecutavel
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria.RequesicaoAlocacaoDiariaDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.noSip.NoProducaoParaProcessamentoDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.exceptions.BusinessException
 import org.springframework.stereotype.Service
 
 @Service

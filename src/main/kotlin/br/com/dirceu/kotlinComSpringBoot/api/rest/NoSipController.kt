@@ -1,8 +1,8 @@
 package br.com.dirceu.kotlinComSpringBoot.api.rest
 
 import br.com.dirceu.kotlinComSpringBoot.business.features.noSip.InformarProducaoNoSip
-import br.com.dirceu.kotlinComSpringBoot.commons.ExecutorFuncionalidade
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.noSip.NoProducaoSipDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ExecutorFuncionalidade
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.noSip.NoProducaoSipDTO
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping

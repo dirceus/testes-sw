@@ -1,7 +1,7 @@
-package br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio
+package br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
-import br.com.dirceu.kotlinComSpringBoot.commons.exceptions.ValidationException
+import br.com.dirceu.kotlinComSpringBoot.business.commons.exceptions.ValidationException
 import java.util.*
 
 data class UnidadeNegocioCompletoDTO(
