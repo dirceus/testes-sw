@@ -1,8 +1,8 @@
 package br.com.dirceu.kotlinComSpringBoot.api.rest
 
-import br.com.dirceu.kotlinComSpringBoot.business.features.noSip.InformarProducaoNoSip
+import br.com.dirceu.kotlinComSpringBoot.business.features.tanqueProducao.InformarProducaoDia
 import br.com.dirceu.kotlinComSpringBoot.business.commons.ExecutorFuncionalidade
-import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.noSip.NoProducaoSipDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.tanqueProducao.ProducaoDiaDTO
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -13,13 +13,13 @@ import java.util.concurrent.CompletionStage
 @RequestMapping("/api/no-sip")
 class NoSipController(
     private val executorFuncionalidade: ExecutorFuncionalidade,
-    private val informarProducaoNoSip: InformarProducaoNoSip)
+    private val informarProducaoDia: InformarProducaoDia)
 {
 
     @PostMapping("/informar-producao")
-    fun informarProducao(@RequestBody filtro: NoProducaoSipDTO) : CompletionStage<Unit> {
+    fun informarProducao(@RequestBody filtro: ProducaoDiaDTO) : CompletionStage<Unit> {
         return executorFuncionalidade(
-            funcionalidade = informarProducaoNoSip,
+            funcionalidade = informarProducaoDia,
             requestDto = filtro,
             requestConverter = {it}
         )

@@ -1,8 +1,8 @@
 package br.com.dirceu.kotlinComSpringBoot.api.rest
 
-import br.com.dirceu.kotlinComSpringBoot.business.features.alocacaoDiaria.AlocarProducaoSipNasUnidadesControle
+import br.com.dirceu.kotlinComSpringBoot.business.features.relatorioProducaoDiaria.RatearProducaoUnidadeNegocioPorPocas
 import br.com.dirceu.kotlinComSpringBoot.business.commons.ExecutorFuncionalidade
-import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.alocacaoDiaria.RequesicaoAlocacaoDiariaDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.relatorioProducaoDiaria.RequesicaoRateioProducaoDTO
 import org.springframework.web.bind.annotation.*
 import java.util.concurrent.CompletionStage
 
@@ -10,13 +10,13 @@ import java.util.concurrent.CompletionStage
 @RequestMapping("/api/alocacao-diara")
 class AlocacaoDiariaController(
     private val executorFuncionalidade: ExecutorFuncionalidade,
-    private val alocarProducaoSipNasUnidadesControle: AlocarProducaoSipNasUnidadesControle
+    private val ratearProducaoUnidadeNegocioPorPocas: RatearProducaoUnidadeNegocioPorPocas
 ) {
 
     @PostMapping("/alocar")
-    fun adicionarUnidadesNegocio(@RequestBody filtro: RequesicaoAlocacaoDiariaDTO) : CompletionStage<Unit> {
+    fun adicionarUnidadesNegocio(@RequestBody filtro: RequesicaoRateioProducaoDTO) : CompletionStage<Unit> {
         return executorFuncionalidade(
-            funcionalidade = alocarProducaoSipNasUnidadesControle,
+            funcionalidade = ratearProducaoUnidadeNegocioPorPocas,
             requestDto = filtro,
             requestConverter = {it}
         )
