@@ -3,7 +3,7 @@ import br.com.dirceu.kotlinComSpringBoot.business.domain.relatorioProducaoDiaria
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "ALOCACAO_DIARIA_POR_UC")
+@Table(name = "RELATORIO_PRODUCAO_DIA_POR_POCAS")
 class RelatorioProducaoDiariaPorPocaPetroleoEntity(
 
     @Id

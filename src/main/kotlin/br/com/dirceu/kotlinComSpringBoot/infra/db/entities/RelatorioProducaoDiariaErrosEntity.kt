@@ -3,7 +3,7 @@ package br.com.dirceu.kotlinComSpringBoot.infra.db.entities
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "ALOCACAO_DIARIA_RELATORIO")
+@Table(name = "RELATORIO_PRODUCAO_DIA_ERROS")
 class RelatorioProducaoDiariaErrosEntity (
 
     @Id

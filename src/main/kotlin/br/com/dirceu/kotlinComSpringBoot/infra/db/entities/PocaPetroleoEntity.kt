@@ -5,7 +5,7 @@ import jakarta.persistence.*
 import java.util.*
 
 @Entity
-@Table(name = "UNIDADE_CONTROLE",
+@Table(name = "POCA_PETROLEO",
     uniqueConstraints = [UniqueConstraint(name="unAndNome", columnNames = ["unidade_negocio_id","nome"])])
 class PocaPetroleoEntity {
 

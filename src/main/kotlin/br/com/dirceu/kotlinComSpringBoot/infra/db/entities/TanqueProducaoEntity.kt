@@ -5,7 +5,7 @@ import br.com.dirceu.kotlinComSpringBoot.business.domain.tanqueProducao.TanquePr
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "NO_SIP",
+@Table(name = "TANQUE_PRODUCAO",
     uniqueConstraints =
     [UniqueConstraint(name="unAndNome", columnNames = ["unidade_negocio_id","nome"])])
 class TanqueProducaoEntity {
@@ -23,9 +23,9 @@ class TanqueProducaoEntity {
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "UCS_VINCULADAS_NO_SIP",
-        joinColumns = [JoinColumn(name = "no_sip_id")],
-        inverseJoinColumns = [JoinColumn(name = "unidade_controle_id")]
+        name = "POCAS_VINCULADAS_TANQUE",
+        joinColumns = [JoinColumn(name = "tanque_id")],
+        inverseJoinColumns = [JoinColumn(name = "poca_id")]
     )
     var pocasVinculadas: List<PocaPetroleoEntity> = arrayListOf()
 
