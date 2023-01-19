@@ -2,9 +2,9 @@ package br.com.dirceu.kotlinComSpringBoot.business.features.unidadeNegocio
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocioRepository
-import br.com.dirceu.kotlinComSpringBoot.commons.FunciolidadeExecutavel
-import br.com.dirceu.kotlinComSpringBoot.commons.ListaPaginada
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.FunciolidadeExecutavel
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ListaPaginada
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
 import org.springframework.stereotype.Service
 
 

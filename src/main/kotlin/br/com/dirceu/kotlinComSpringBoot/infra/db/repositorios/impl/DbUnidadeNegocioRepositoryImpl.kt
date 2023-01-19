@@ -2,8 +2,8 @@ package br.com.dirceu.kotlinComSpringBoot.infra.db.repositorios.impl
 
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocio
 import br.com.dirceu.kotlinComSpringBoot.business.domain.unidadeNegocio.UnidadeNegocioRepository
-import br.com.dirceu.kotlinComSpringBoot.commons.ListaPaginada
-import br.com.dirceu.kotlinComSpringBoot.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
+import br.com.dirceu.kotlinComSpringBoot.business.commons.ListaPaginada
+import br.com.dirceu.kotlinComSpringBoot.business.commons.dto.unidadeNegocio.UnidadeNegocioFiltroDTO
 import br.com.dirceu.kotlinComSpringBoot.infra.db.entities.UnidadeNegocioEntity
 import br.com.dirceu.kotlinComSpringBoot.infra.db.repositorios.UnidadeNegocioJpaRepository
 import org.springframework.stereotype.Repository
