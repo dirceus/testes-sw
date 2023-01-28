@@ -3,17 +3,11 @@ Projeto para exercitar a criação de testes de unidade e de integração
 
 #### Contexto do Projeto
 
-Empresa petrolífera fictícia que extrai petróleos de poças e armazena o petróleo extraído em tanques.
-A medição da produção é aferida nos tanques, no entanto, cada poça tem um proprietário distinto e a empresa precisa identificar o quanto foi produzido por cada por poça para pagar os royalties aos proprietários.
-Todo dia a empresa gera um relatório com a produção de cada poça.
+Empresa petrolífera fictícia que divide suas operações por unidades de negócio, cada unidade possui um conjunto de instalações de produção, essas instalações são conectadas a um ou mais poços de onde são extraído o petróleo.
 
+A medição da produção é realizada na instalação de produção, nelas existe um único registro de medição que informa o quanto de óleo chegaram de todos os poços conectados a instalação nas últimas 24 horas, essa informação é registrada em um boletim diário de medição.
 
-
-#### Modus Operandi da Empresa
-
-O petroleo jorra da terra formando poças, através de bombas esse petroleo é armazenado nos tanques, os tanques possuem uma fita metricas marcando a quantidade de litros, todo dia as 14hs um operador registra em uma cardeneta o volume do tanque e rateio o volume igualmente as poças vinculadas a ele.
-
-![image](https://user-images.githubusercontent.com/67016005/213329488-e0e43b04-8d9c-4d76-9f7d-1e05c7448c91.png)
+Além da produção da instalação que está no boletim, a empresa precisa de relatórios diários da produção para cada poço, para calcular a produção dos poços, a empresa verifica quantos poços conectados a instalação estavam produzinho na data do relatório e divide igualmente a produção da instalação por esses poços.
 
 #### Pedido do Cliente
 
@@ -21,7 +15,7 @@ Construir um sistema para registrar a produção e que gere um relatorio diário
 
 #### Dominio modelado pelo Desenvolvedor em conjunto com o Cliente
 
-![image](https://user-images.githubusercontent.com/67016005/213332715-e990b7e1-0fd5-4062-a1ab-6ef9bfa3e035.png)
+![image](https://user-images.githubusercontent.com/67016005/215272058-b306cc1a-c708-4234-9245-b10f4b9d8e07.png)
 
 ##### Casos de Usos (Features)
 
