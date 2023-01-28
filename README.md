@@ -9,19 +9,18 @@ A medição da produção é realizada na instalação de produção, nelas exis
 
 Além da produção da instalação que está no boletim, a empresa precisa de relatórios diários da produção para cada poço, para calcular a produção dos poços, a empresa verifica quantos poços conectados a instalação estavam produzinho na data do relatório e divide igualmente a produção da instalação por esses poços.
 
+![image](https://user-images.githubusercontent.com/67016005/215276093-719e5de6-363a-458a-9e92-f703dd98b772.png)
+
+
 #### Pedido do Cliente
 
-Construir um sistema para registrar a produção e que gere um relatorio diário com o que cada poço produziu.
+Construir um sistema para registrar a produção diária das plataformas e que gere um relatorio diário com o que cada poço produziu.
 
 #### Dominio modelado pelo Desenvolvedor em conjunto com o Cliente
 
-![image](https://user-images.githubusercontent.com/67016005/215272058-b306cc1a-c708-4234-9245-b10f4b9d8e07.png)
+![image](https://user-images.githubusercontent.com/67016005/215274390-8433fbc8-1d40-4a7c-ab6a-7440cdd5f059.png)
 
 ##### Casos de Usos (Features)
 
-* Cadastrar UN
-* Cadastrar Tanque
-* Cadastrar Poça
-* Vincular Poça a Tanque
-* Informar Produção do Tanque por Dia
-* Gerar Relatório da Produç
+![image](https://user-images.githubusercontent.com/67016005/215274116-0987ece7-0f87-4028-bfa8-54954c960376.png)
+
