@@ -7,6 +7,7 @@ import br.com.demo.business.domain.instalacao.InstalacaoProducaoRepository
 import br.com.demo.infra.db.repositorios.BoletimMedicaoDiariaJpaRepository
 import br.com.demo.infra.db.repositorios.InstalacaoProducaoJpaRepository
 import org.springframework.stereotype.Repository
+import java.time.LocalDate
 
 
 @Repository
@@ -28,6 +29,14 @@ class DbInstalacaoProducaoRepositoryImpl(
     }
 
     override fun quantidadeInstalacoesAtivas(codigoUn: Int): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun obter(codInstalacao: Int): InstalacaoProducao? {
+        TODO("Not yet implemented")
+    }
+
+    override fun obterPeloVinculo(codPoco: Int, dataInicio: LocalDate, dataFim: LocalDate): InstalacaoProducao? {
         TODO("Not yet implemented")
     }
 

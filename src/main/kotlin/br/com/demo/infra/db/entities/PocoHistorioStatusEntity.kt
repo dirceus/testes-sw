@@ -17,7 +17,7 @@ class PocoHistorioStatusEntity {
     @Column(nullable = false, name = "data_inicio")
     var dataInicio: LocalDate? = null
 
-    @Column(name = "data_fimo")
+    @Column(name = "data_fim")
     var dataFim: LocalDate? = null
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -26,7 +26,7 @@ class PocoHistorioStatusEntity {
 
 
     fun toPocoHistoricoStatus(): HistoricoStatusPoco{
-        var historico =
+        val historico =
             HistoricoStatusPoco(StatusPocoEnum.valueOf(this.status!!),
                 this.dataInicio!!,
                 this.dataFim)
