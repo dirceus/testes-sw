@@ -2,11 +2,10 @@ package br.com.demo.infra.db.repositorios.impl
 
 import br.com.demo.business.commons.ListaPaginada
 import br.com.demo.business.domain.instalacao.InstalacaoProducao
-import br.com.demo.business.domain.instalacao.InstalacaoProducaoDTO
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoFiltroDTO
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoRepository
-import br.com.demo.infra.db.repositorios.InstalacaoProducaoJpaRepository
 import br.com.demo.infra.db.repositorios.BoletimMedicaoDiariaJpaRepository
+import br.com.demo.infra.db.repositorios.InstalacaoProducaoJpaRepository
 import org.springframework.stereotype.Repository
 
 
@@ -24,7 +23,7 @@ class DbInstalacaoProducaoRepositoryImpl(
         TODO("Not yet implemented")
     }
 
-    override fun listaInstalacoesPorUn(codigoUn: Int): List<InstalacaoProducaoDTO> {
+    override fun listaInstalacoesPorUn(codigoUn: Int): List<InstalacaoProducao> {
         TODO("Not yet implemented")
     }
 

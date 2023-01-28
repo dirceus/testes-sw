@@ -1,12 +1,11 @@
 package br.com.demo.business.domain.boletimMedicaoDiaria
 
 import br.com.demo.business.commons.ListaPaginada
-import br.com.demo.business.domain.instalacao.InstalacaoProducao
 import java.time.LocalDate
 
 interface BoletimMedicaoDiariaRepository {
 
-    abstract fun obterBoletimMedicao(instalacao: InstalacaoProducao,
+    abstract fun obterBoletimMedicao(codInstalacao: Int,
                                      data: LocalDate) : BoletimMedicaoDiaria?
 
     abstract fun obterBoletinsMedicao(codUn:Int, data : LocalDate) : List<BoletimMedicaoDiaria>

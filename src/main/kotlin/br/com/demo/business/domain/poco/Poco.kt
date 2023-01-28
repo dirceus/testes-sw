@@ -2,16 +2,18 @@ package br.com.demo.business.domain.poco
 
 import br.com.demo.business.commons.exceptions.BusinessException
 import br.com.demo.business.domain.instalacao.InstalacaoProducao
+import br.com.demo.business.domain.unidadeNegocio.UnidadeNegocio
 import java.time.LocalDate
 
 data class Poco(
     val nome: String,
     var descricao: String? = null,
-    val instalacao: InstalacaoProducao,
+    var unidadeNegocio: UnidadeNegocio,
     val dataCriacao: LocalDate
 ){
     var codigo: Int? = null
     var status: StatusPocoEnum = StatusPocoEnum.NAO_OPERANDO
+    var instalacaoPoco: InstalacaoProducao? = null
     var historicoStatus: MutableList<HistoricoStatusPoco> =
         mutableListOf(HistoricoStatusPoco(status = StatusPocoEnum.NAO_OPERANDO, dataInicio = this.dataCriacao,dataFim = null))
 
