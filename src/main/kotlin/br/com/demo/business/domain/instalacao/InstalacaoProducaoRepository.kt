@@ -5,7 +5,7 @@ import java.time.LocalDate
 
 interface InstalacaoProducaoRepository {
     abstract fun consultarInstalacoes(filtroDTO: InstalacaoProducaoFiltroDTO): ListaPaginada<InstalacaoProducao>
-    abstract fun salvar(instalcao: InstalacaoProducao) : InstalacaoProducao
+    abstract fun salvar(instalcao: InstalacaoProducao) : Unit
     abstract fun listaInstalacoesPorUn(codigoUn: Int) : List<InstalacaoProducao>
     abstract fun quantidadeInstalacoesAtivas(codigoUn: Int) : Int
     abstract fun obter(codInstalacao : Int): InstalacaoProducao?

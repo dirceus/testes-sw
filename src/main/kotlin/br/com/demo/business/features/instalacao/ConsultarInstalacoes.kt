@@ -5,17 +5,24 @@ import br.com.demo.business.commons.ListaPaginada
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoDTO
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoFiltroDTO
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoRepository
+import org.springframework.stereotype.Service
 
-class ConsultarInstalacoes (private val instalacaoRepository: InstalacaoProducaoRepository
-) : FunciolidadeExecutavel<InstalacaoProducaoFiltroDTO, ListaPaginada<InstalacaoProducaoDTO>> {
 
-    override fun executar(filtro: InstalacaoProducaoFiltroDTO): ListaPaginada<InstalacaoProducaoDTO> {
-        val listaPaginada = instalacaoRepository.consultarInstalacoes(filtro)
-        //instancia uma nova lista paginada convertendo modelo em dto
-        return ListaPaginada<InstalacaoProducaoDTO>(listaPaginada.total,
-                        listaPaginada.tamanho,
-                        listaPaginada.pagina,
-                        listaPaginada.itens.map { InstalacaoProducaoDTO(it) })
+@Service
+class ConsultarInstalacoes (private val instalacaoProducaoRepository: InstalacaoProducaoRepository
+    ) : FunciolidadeExecutavel<InstalacaoProducaoFiltroDTO, ListaPaginada<InstalacaoProducaoDTO>> {
+
+
+    override fun executar(request: InstalacaoProducaoFiltroDTO): ListaPaginada<InstalacaoProducaoDTO> {
+        val listaPaginadaInstalacoes = instalacaoProducaoRepository.consultarInstalacoes(request)
+        return ListaPaginada(
+            listaPaginadaInstalacoes.total,
+            listaPaginadaInstalacoes.tamanho,
+            listaPaginadaInstalacoes.pagina,
+            listaPaginadaInstalacoes.itens.map {
+                InstalacaoProducaoDTO(it.codigo,it.nome,it.unidadeNegocio.codigo!!, it.unidadeNegocio.nome,it.ativo)
+            }
+        )
     }
 
 }

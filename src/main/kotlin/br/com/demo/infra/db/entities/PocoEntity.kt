@@ -6,15 +6,14 @@ import jakarta.persistence.*
 import java.time.LocalDate
 
 @Entity
-@Table(name = "POCO",
-    uniqueConstraints = [UniqueConstraint(name="InstalacaoAndNome", columnNames = ["instalacao_id","nome"])])
+@Table(name = "POCO")
 class PocoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int? = null
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     var nome: String? = null
 
     @Column

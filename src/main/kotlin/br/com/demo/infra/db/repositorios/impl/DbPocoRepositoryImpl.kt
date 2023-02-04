@@ -1,10 +1,7 @@
 package br.com.demo.infra.db.repositorios.impl
 
 import br.com.demo.business.commons.ListaPaginada
-import br.com.demo.business.domain.poco.Poco
-import br.com.demo.business.domain.poco.PocoFiltroDTO
-import br.com.demo.business.domain.poco.PocoRepository
-import br.com.demo.business.domain.poco.StatusPocoEnum
+import br.com.demo.business.domain.poco.*
 import br.com.demo.infra.db.repositorios.PocoJpaRepository
 import org.springframework.stereotype.Repository
 
@@ -13,7 +10,7 @@ class DbPocoRepositoryImpl(
     private val pocoJpaRepository: PocoJpaRepository)
     : PocoRepository
 {
-    override fun obterPocos(filtroDTO: PocoFiltroDTO): ListaPaginada<Poco> {
+    override fun consultar(filtroDTO: PocoFiltroDTO): ListaPaginada<Poco> {
         TODO("Not yet implemented")
     }
 
@@ -26,6 +23,10 @@ class DbPocoRepositoryImpl(
     }
 
     override fun alterarStatusPoco(poco: Poco, statusNovo: StatusPocoEnum) {
+        TODO("Not yet implemented")
+    }
+
+    override fun salvarVinculo(vinculoInstalacaoPoco: VinculoInstalacaoPoco) {
         TODO("Not yet implemented")
     }
 

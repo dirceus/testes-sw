@@ -4,6 +4,7 @@ import br.com.demo.business.commons.ListaPaginada
 import br.com.demo.business.domain.instalacao.InstalacaoProducao
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoFiltroDTO
 import br.com.demo.business.domain.instalacao.InstalacaoProducaoRepository
+import br.com.demo.infra.db.entities.InstalacaoProducaoEntity
 import br.com.demo.infra.db.repositorios.BoletimMedicaoDiariaJpaRepository
 import br.com.demo.infra.db.repositorios.InstalacaoProducaoJpaRepository
 import org.springframework.stereotype.Repository
@@ -20,8 +21,11 @@ class DbInstalacaoProducaoRepositoryImpl(
         TODO("Not yet implemented")
     }
 
-    override fun salvar(instalcao: InstalacaoProducao): InstalacaoProducao {
-        TODO("Not yet implemented")
+    override fun salvar(instalcao: InstalacaoProducao): Unit {
+
+        var instalacaoProducaoEntity = InstalacaoProducaoEntity()
+        instalacaoProducaoEntity.fromInstalacaoProducao(instalcao)
+        instalacaoProducaoJpaRepository.save(instalacaoProducaoEntity)
     }
 
     override fun listaInstalacoesPorUn(codigoUn: Int): List<InstalacaoProducao> {

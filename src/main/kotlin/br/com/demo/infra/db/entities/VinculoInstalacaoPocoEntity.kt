@@ -5,7 +5,7 @@ import java.time.LocalDate
 
 @Entity
 @Table(name = "VINCULO_INSTALACAO_POCO")
-class VinculoInstalacaoPoco {
+class VinculoInstalacaoPocoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,6 +11,7 @@ class ListarUnidadesNegocioAtivas(
 ): FunciolidadeExecutavel<Unit, List<UnidadeNegocioDTO>> {
 
     override fun executar(request: Unit): List<UnidadeNegocioDTO>{
-        return unidadeNegocioRepository.obterTodas(true)
+        var lista = unidadeNegocioRepository.obterTodas()
+        return lista.filter { it.ativo }
     }
 }

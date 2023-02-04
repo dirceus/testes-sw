@@ -4,7 +4,6 @@ import br.com.demo.business.commons.ExecutorFuncionalidade
 import br.com.demo.business.commons.ListaPaginada
 import br.com.demo.business.domain.unidadeNegocio.UnidadeNegocioDTO
 import br.com.demo.business.domain.unidadeNegocio.UnidadeNegocioFiltroDTO
-import br.com.demo.business.domain.unidadeNegocio.UnidadeNegocio
 import br.com.demo.business.features.unidadeNegocio.AdicionarUnidadeNegocio
 import br.com.demo.business.features.unidadeNegocio.ConsultarUnidadesNegocio
 import br.com.demo.business.features.unidadeNegocio.EditarUnidadeNegocio
@@ -24,22 +23,44 @@ class UnidadeNegocioController(
 
     @GetMapping("/listar/un-ativas")
     fun listarUnidadesNegocioAtivas() : CompletionStage<List<UnidadeNegocioDTO>> {
-        TODO()
+        return executorFuncionalidade(
+            funcionalidade = listarUnidadesNegocioAtivas,
+            responseConverter = {it.map {
+                                    un -> UnidadeNegocioDTO(un.id,
+                                                            un.nome,
+                                                            un.descricao,
+                                                            un.ativo)
+                                }
+            }
+        )
     }
 
     @GetMapping("/listar")
-    fun listarUnidadesNegocio(filtro: UnidadeNegocioFiltroDTO) : CompletionStage<ListaPaginada<UnidadeNegocio>> {
-        TODO()
+    fun listarUnidadesNegocio(filtro: UnidadeNegocioFiltroDTO) : CompletionStage<ListaPaginada<UnidadeNegocioDTO>> {
+        return executorFuncionalidade(
+            funcionalidade = consultarUnidadesNegocio,
+            requestDto = filtro,
+            requestConverter = {it},
+            responseConverter = {it}
+        )
     }
 
     @PostMapping("/adicionar")
     fun adicionarUnidadesNegocio(@RequestBody filtro: UnidadeNegocioDTO) : CompletionStage<Unit> {
-        TODO()
+        return executorFuncionalidade(
+            funcionalidade = adicionarUnidadeNegocio,
+            requestDto = filtro,
+            requestConverter = {it.toModel()}
+        )
     }
 
     @PostMapping("/editar")
     fun editarUnidadesNegocio(@RequestBody filtro: UnidadeNegocioDTO) : CompletionStage<Unit> {
-        TODO()
+        return executorFuncionalidade(
+            funcionalidade = editarUnidadeNegocio,
+            requestDto = filtro,
+            requestConverter = {it.toModel()}
+        )
     }
 
 

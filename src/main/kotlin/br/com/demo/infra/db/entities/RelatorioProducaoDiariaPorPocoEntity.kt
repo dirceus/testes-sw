@@ -3,7 +3,7 @@ import br.com.demo.business.domain.relatorioProducaoDiaria.ProducaoDiariaPorPoco
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "RELATORIO_PRODUCAO_DIA_POR_POCAS")
+@Table(name = "RELATORIO_PRODUCAO_DIA_POR_POCO")
 class RelatorioProducaoDiariaPorPocoEntity(
 
     @Id

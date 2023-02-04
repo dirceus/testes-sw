@@ -29,9 +29,9 @@ class DbUnidadeNegocioRepositoryImpl
         return unidadaNegocioJpaRepository.findByNome(nome)?.toUnidadeNegocio()
     }
 
-    override fun obterTodas(ativas: Boolean): List<UnidadeNegocioDTO> {
-        val entityList =  this.unidadaNegocioJpaRepository.findAll().filter { it.ativo == true }
-        return entityList.map { UnidadeNegocioDTO(it.id, it.nome,it.descricao,it.ativo) }
+    override fun obterTodas(): List<UnidadeNegocioDTO> {
+        val entityList =  this.unidadaNegocioJpaRepository.findAll()
+        return entityList.map { UnidadeNegocioDTO(it.id, it.nome!!,it.descricao,it.ativo!!) }
     }
 
     override fun consultar(filtro: UnidadeNegocioFiltroDTO): ListaPaginada<UnidadeNegocio> {

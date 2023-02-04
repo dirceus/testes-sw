@@ -4,7 +4,7 @@ import br.com.demo.business.domain.instalacao.InstalacaoProducao
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "TANQUE_PRODUCAO",
+@Table(name = "INSTALACAO_PRODUCAO",
     uniqueConstraints =
     [UniqueConstraint(name="unAndNome", columnNames = ["unidade_negocio_id","nome"])])
 class InstalacaoProducaoEntity {

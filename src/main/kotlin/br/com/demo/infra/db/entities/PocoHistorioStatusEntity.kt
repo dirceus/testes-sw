@@ -4,7 +4,8 @@ import br.com.demo.business.domain.poco.HistoricoStatusPoco
 import br.com.demo.business.domain.poco.StatusPocoEnum
 import jakarta.persistence.*
 import java.time.LocalDate
-
+@Entity
+@Table(name="POCO_HISTORICO_STATUS")
 class PocoHistorioStatusEntity {
 
     @Id
