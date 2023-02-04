@@ -35,8 +35,8 @@ class UnidadeNegocioController(
         )
     }
 
-    @GetMapping("/listar")
-    fun listarUnidadesNegocio(filtro: UnidadeNegocioFiltroDTO) : CompletionStage<ListaPaginada<UnidadeNegocioDTO>> {
+    @GetMapping("/consultar")
+    fun consultarUnidadesNegocio(filtro: UnidadeNegocioFiltroDTO) : CompletionStage<ListaPaginada<UnidadeNegocioDTO>> {
         return executorFuncionalidade(
             funcionalidade = consultarUnidadesNegocio,
             requestDto = filtro,

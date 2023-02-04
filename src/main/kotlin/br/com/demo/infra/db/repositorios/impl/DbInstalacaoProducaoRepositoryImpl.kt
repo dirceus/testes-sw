@@ -38,10 +38,10 @@ class DbInstalacaoProducaoRepositoryImpl(
         instalacaoProducaoJpaRepository.save(instalacaoProducaoEntity)
     }
 
-    override fun listaInstalacoesPorUn(codigoUn: Int): List<InstalacaoProducao> {
+    override fun listaInstalacoes(filtroDTO: InstalacaoProducaoFiltroDTO): List<InstalacaoProducao> {
 
         var listaInstalacaoEntity = this.instalacaoProducaoJpaRepository.findAll(
-            InstalacaoSpecification(codigoUn = codigoUn).build()
+            InstalacaoSpecification(codigoUn = filtroDTO.codigoUnidadeNegocio, ativo = filtroDTO.ativo).build()
         )
         return listaInstalacaoEntity.map { it.toInstalacaoProducao() }
 
