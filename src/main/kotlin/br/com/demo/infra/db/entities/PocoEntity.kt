@@ -32,7 +32,7 @@ class PocoEntity {
     @OneToMany(cascade = [(CascadeType.ALL)], fetch = FetchType.LAZY, mappedBy = "poco")
     var pocoHistorioStatus: List<PocoHistorioStatusEntity>? = null
 
-    fun toPoco(instalacaoEntity: InstalacaoProducaoEntity? = null) : Poco{
+    fun toPoco(instalacaoEntity: InstalacaoProducaoEntity? = null, listaHistoricoEntity: MutableList<PocoHistorioStatusEntity> = mutableListOf()) : Poco{
 
         var poco = Poco(this.nome!!,
                         this.descricao,
@@ -41,9 +41,11 @@ class PocoEntity {
         )
 
         poco.codigo = this.id
-        poco.status = StatusPocoEnum.valueOf(this.status!!)
-        poco.historicoStatus = pocoHistorioStatus!!.map{it.toPocoHistoricoStatus()}
-            .toMutableList()
+        poco.status = StatusPocoEnum.fromCodigo(this.status)
+        val historico = listaHistoricoEntity.map {
+            it.toPocoHistoricoStatus()
+        }.toMutableList()
+        poco.historicoStatus = historico
         poco.instalacaoPoco = instalacaoEntity?.toInstalacaoProducao()
         return poco
     }
@@ -54,12 +56,15 @@ class PocoEntity {
         this.descricao = poco.descricao
         this.status = poco.status.codigo
         this.dataCriacao = poco.dataCriacao
+        var unEntity = UnidadeNegocioEntity()
+        unEntity.fromUnidadeNegocio(poco.unidadeNegocio)
+        this.unidadeNegocio = unEntity
         this.pocoHistorioStatus = poco.historicoStatus.map {
             var historico = PocoHistorioStatusEntity()
             historico.poco= this
             historico.id=it.codigo
             historico.status=it.status.codigo
-            historico.dataFim=it.dataInicio
+            historico.dataInicio=it.dataInicio
             historico.dataFim=it.dataFim
             historico
         }

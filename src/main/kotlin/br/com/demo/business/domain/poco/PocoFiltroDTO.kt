@@ -4,7 +4,9 @@ import br.com.demo.business.commons.QueryPaginavel
 
 data class PocoFiltroDTO(
     val nome: String?,
-    var status: StatusPocoEnum?,
+    val codigoUnidadeNegocio: Int?,
+    val codigoInstalacao: Int?,
+    val status: StatusPocoEnum?,
     override var pagina: Int = 0,
     override var tamanho: Int = 10,
     override var ordenacaoProp: String = "nome",

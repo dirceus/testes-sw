@@ -28,7 +28,7 @@ class PocoHistorioStatusEntity {
 
     fun toPocoHistoricoStatus(): HistoricoStatusPoco{
         val historico =
-            HistoricoStatusPoco(StatusPocoEnum.valueOf(this.status!!),
+            HistoricoStatusPoco(StatusPocoEnum.fromCodigo(this.status),
                 this.dataInicio!!,
                 this.dataFim)
         historico.codigo = this.id

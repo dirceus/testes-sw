@@ -21,14 +21,15 @@ data class Poco(
         if(this.status == novoStatus){
             throw BusinessException("Poço já está no status ${novoStatus.descricao}")
         }
-        if(dataInicioNovoStatus.isAfter(historicoStatus.maxOf{ it.dataInicio})){
-            throw BusinessException("Data início {$dataInicioNovoStatus} é anterior a data do último status ${historicoStatus.maxOf{ it.dataInicio}}")
+        val dataUltimoStatus = historicoStatus.maxOf{ it.dataInicio}
+        if(dataInicioNovoStatus.isBefore(dataUltimoStatus) || dataInicioNovoStatus.isEqual(dataUltimoStatus)){
+            throw BusinessException("Data início $dataInicioNovoStatus é anterior ou igual a data do último status $dataUltimoStatus")
         }
 
         this.status = novoStatus
         var ultimoStatus = this.historicoStatus.filter { it.dataFim == null }
         if(ultimoStatus.size != 1){
-            throw BusinessException("Histório de status está incopara o poco {${this.nome}}")
+            throw BusinessException("Histório de status do poço  ${this.nome} está inconsistente")
         }
         dataInicioNovoStatus.also { ultimoStatus[0].dataFim = it }
         historicoStatus.add(HistoricoStatusPoco(novoStatus,dataInicioNovoStatus, null ))
